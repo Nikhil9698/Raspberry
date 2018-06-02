@@ -12,6 +12,7 @@ now we edit this file
 sudo nano /etc/dhcpcd.conf
 
 enter following 2 line in this file
+
 interface wlan0
     static ip_address=192.168.43.1/24
 in above change ip as you need
@@ -21,17 +22,23 @@ sudo service dhcpcd restart
  sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig 
 
 edit this file
+
 sudo nano /etc/dnsmasq.conf
+
   interface=wlan0      # Use the require wireless interface - usually wlan0
-  dhcp-range=192.168.43.2,192.168.43.20,255.255.255.0,24h
+   dhcp-range=192.168.43.2,192.168.43.20,255.255.255.0,24h
+  
 this is for hotspot provide ip between them
 
 Edit this file
+
 sudo nano /etc/hostapd/hostapd.conf
+
 enter the folllowing line
+
   interface=wlan0
   driver=nl80211
-  ssid=BlackQR   
+  ssid=BlackQR  
   hw_mode=g
   channel=7
   wmm_enabled=0
