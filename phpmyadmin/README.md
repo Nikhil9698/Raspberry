@@ -17,7 +17,9 @@ sudo apt install mysql-server php-mysql mysql-client
 sudo apt-get install phpmyadmin
 
 sudo nano /etc/apache2/apache2.conf
+
   in last add this line
+  
   Include /etc/phpmyadmin/apache.conf
   
 sudo /etc/init.d/apache2 restart
